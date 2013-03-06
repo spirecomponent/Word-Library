@@ -5,20 +5,26 @@ In this document, we will quickly help you finish a simple demo about Spire.Doc 
 
 In Visual Studio, click File, New, and then Project, If you want to create a C# project, select Visual C#, Windows and choose Windows Forms Application and name the project HelloWorld. Click OK. If you want to create a Visual Basic project, select Visual Basic, Windows Forms Application and name the project HelloWorld. Click OK.
 In Solution Explorer, right-click the project HelloWorld and click Add Reference. In the Browse tab, find the folder which you installed the Spire.Doc in, default is "C:\Program Files\e-iceblue\Spire.Doc", double-click the folder Bin. If the target framework of the project HelloWorld
-<ul>
-        <il>is .NET 2.0, double-click folder NET2.0</il>
-        <il>is .NET 3.5, double-click folder NET3.5</il>
-        <il>is .NET 4.0, double-click folder NET4.0</il>
-        <il>is .NET 4.0 ClientProfile, double-click folder NET4.0 ClentProfile</il>
-</il>
+
+        is .NET 2.0, double-click folder NET2.0
+        is .NET 3.5, double-click folder NET3.5
+        is .NET 4.0, double-click folder NET4.0
+        is .NET 4.0 ClientProfile, double-click folder NET4.0 ClentProfile
+
 select assembly Spire.Doc.dll and click OK to add it to the project.
 In Solution Explorer, double-click the file Form1.cs/Form1.vb to open the form design view, add a button into the form, and change its name to 'btnRun', change its text to 'Run'.
 Double-click the button 'Run', you will see the code view and the following method has been added automatically:
+
 C#
+
 private void btnRun_Click(object sender, EventArgs e)
+
 VB.NET
+
 Private Sub btnRun_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRun.Click
+
 Add the following codes to the top of the file:
+
 C#
 
         using Spire.Doc;
