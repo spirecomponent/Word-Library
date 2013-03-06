@@ -1,1 +1,2 @@
-$ git commit F:\E-iceblue\Spire.Doc\Demos\CS\WinForms\01_Quick guide 
+$ git remote add Quick Guide https://github.com/spirecomponent/Word-Library
+$ git push Quick Guide master
