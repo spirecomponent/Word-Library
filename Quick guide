@@ -1,45 +1,74 @@
-using System;
-using System.Windows.Forms;
-using Spire.Doc;
-using Spire.Doc.Documents;
+Spire.Doc Quick Start 
+======================
 
-namespace Editing
-{
-    public partial class Form1 : Form
-    {
-        public Form1()
+In this document, we will quickly help you finish a simple demo about Spire.Doc using Visual Studio. As usual, it’s a HelloWorld demo. Before you get started, please make sure the Spire.Doc and Visual Studio (2008 or later) are installed on your computer.
+
+In Visual Studio, click File, New, and then Project, If you want to create a C# project, select Visual C#, Windows and choose Windows Forms Application and name the project HelloWorld. Click OK. If you want to create a Visual Basic project, select Visual Basic, Windows Forms Application and name the project HelloWorld. Click OK.
+In Solution Explorer, right-click the project HelloWorld and click Add Reference. In the Browse tab, find the folder which you installed the Spire.Doc in, default is "C:\Program Files\e-iceblue\Spire.Doc", double-click the folder Bin. If the target framework of the project HelloWorld
+<ul>
+        <il>is .NET 2.0, double-click folder NET2.0</il>
+        <il>is .NET 3.5, double-click folder NET3.5</il>
+        <il>is .NET 4.0, double-click folder NET4.0</il>
+        <il>is .NET 4.0 ClientProfile, double-click folder NET4.0 ClentProfile</il>
+</il>
+select assembly Spire.Doc.dll and click OK to add it to the project.
+In Solution Explorer, double-click the file Form1.cs/Form1.vb to open the form design view, add a button into the form, and change its name to 'btnRun', change its text to 'Run'.
+Double-click the button 'Run', you will see the code view and the following method has been added automatically:
+C#
+private void btnRun_Click(object sender, EventArgs e)
+VB.NET
+Private Sub btnRun_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRun.Click
+Add the following codes to the top of the file:
+C#
+
+        using Spire.Doc;
+        using Spire.Doc.Documents;
+
+VB.NET
+
+        Imports Spire.Doc
+        Imports Spire.Doc.Documents
+
+Add the following codes to the method btnRun_Click
+
+C#
+        //Create word document
+        Document document = new Document();
+
+        //Create a new paragraph
+        Paragraph paragraph = document.AddSection().AddParagraph();
+
+        //Append Text
+        paragraph.AppendText("Hello World!");
+
+        //Save doc file.
+        document.SaveToFile("Sample.doc", FileFormat.Doc);
+
+        //Launching the MS Word file.
+        try
         {
-            InitializeComponent();
+            System.Diagnostics.Process.Start("Sample.doc");
         }
+        catch { }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Create word document
-            Document document = new Document();
+VB.NET
 
-            //load a document
-            document.LoadFromFile(@"..\..\..\..\..\..\Data\Editing.doc");
+        'Create word document
+        Dim document_Renamed As New Document()
 
-            //Get a paragraph
-            Paragraph paragraph = document.Sections[0].AddParagraph();
+        'Create a new paragraph
+        Dim paragraph_Renamed As Paragraph = document_Renamed.AddSection().AddParagraph()
 
-            //Append Text
-            paragraph.AppendText("Editing sample");
+        'Append Text
+        paragraph_Renamed.AppendText("Hello World!")
 
-            //Save doc file.
-            document.SaveToFile("Sample.doc", FileFormat.Doc);
+        'Save doc file.
+        document_Renamed.SaveToFile("Sample.doc", FileFormat.Doc)
 
-            //Launching the MS Word file.
-            WordDocViewer("Sample.doc");
-        }
+        'Launching the MS Word file.
+        Try
+            System.Diagnostics.Process.Start("Sample.doc")
+        Catch
+        End Try
 
-        private void WordDocViewer(string fileName)
-        {
-            try
-            {
-                System.Diagnostics.Process.Start(fileName);
-            }
-            catch { }
-        }
-    }
-}
+In Solution Explorer, right-click the project HelloWorld and click Debug, then Start new instance, you will see the opened window Form1, click the button 'Run', a Word document will be created, edited and opened. The string "Hello, World" is filled in the first line of page 1.
