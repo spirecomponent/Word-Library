@@ -2,7 +2,7 @@ Word Library-Spire.Doc for .NET
 ============
 ________________________________________________________________________________________________________________________
 
-<a href="http://www.e-iceblue.com/Introduce/word-for-net-introduce.html">Spire.Doc for .NET</a> enables developers to perform a large range of tasks on Word document(from Version Word97-2203 to Word 2010) for .NET in C# and Visual Basic. This libray is specially designed for .NET developers to help them to create any WinForm and ASP.NET Web applications to create, open, write, edit, save and convert Word document without Microsoft Office and any other third-party tools installed on system.</p>  
+<a href="http://www.e-iceblue.com/Introduce/word-for-net-introduce.html">Spire.Doc for .NET</a> enables developers to perform a large range of tasks on Word document(from Version Word97-2003 to Word 2010) for .NET in C# and Visual Basic. This libray is specially designed for .NET developers to help them to create any WinForm and ASP.NET Web applications to create, open, write, edit, save and convert Word document without Microsoft Office and any other third-party tools installed on system.</p>  
 
 Functions
 ============
